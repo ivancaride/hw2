@@ -287,8 +287,7 @@ puts ""
 
 # Query the movies data and loop through the results to display the movies output.
 # TODO!
- 
-Warner_movies = Movie.where ({"studio_id" => WarnerBros["id"] })
+
 movies = Movie.all
 
 for movie in movies
@@ -307,3 +306,32 @@ puts ""
 
 # Query the cast data and loop through the results to display the cast output for each movie.
 # TODO!
+
+roles_batman_begins = Role.where ({"movie_id" => Batman_Begins["id"]})
+roles_the_dark_knight = Role.where ({"movie_id" => The_Dark_Knight["id"]})
+roles_the_dark_knight_rises = Role.where ({"movie_id" => The_Dark_Knight_Rises["id"]})
+
+
+
+for role in roles_batman_begins
+    title = Batman_Begins["title"]
+    name = role["role_name"]
+    actor_id = role["actor_id"]
+    actorname = Actor[]
+
+    puts "#{title}  #{name}  #{actor_id}"
+end
+
+#def actor_name_function
+  #  Actor.find_by({"id"=> x })
+ #       Actor ["actor_name"]
+#end
+
+#for role in roles_batman_begins
+ #   title = Batman_Begins["title"] 
+  #  name = role["role_name"]
+   # actor = actor_name_function ("actor_id")
+#end
+
+    #puts "#{title}  #{name}  #{actor}"
+#end
