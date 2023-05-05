@@ -306,51 +306,9 @@ puts ""
 # Query the cast data and loop through the results to display the cast output for each movie.
 # TODO!
 
-#roles_batman_begins = Role.where ({"movie_id" => Batman_Begins["id"]})
-#roles_the_dark_knight = Role.where ({"movie_id" => The_Dark_Knight["id"]})
-#roles_the_dark_knight_rises = Role.where ({"movie_id" => The_Dark_Knight_Rises["id"]})
 
 roles = Role.all
 
 for role in roles
-    #title = Batman_Begins["title"]
-    #name = role["role_name"]
-    #actor_id = role["actor_id"]
- #   actorname = Actor.find_by({"id"=> actor_id})
-    #puts "#{title}  #{name}  #{Actor.find_by("id"=> Role.actor_id)["actor_name"]})"
-    puts "#{Movie.find_by("id"=>role.movie_id)["title"]} #{Actor.find_by("id"=> role.actor_id)["actor_name"]} #{role.role_name}"
+    puts "#{Movie.find_by("id"=>role.movie_id)["title"]}     #{Actor.find_by("id"=> role.actor_id)["actor_name"]}     #{role.role_name}"
 end
-
-#for role in roles_the_dark_knight
- #   title = The_Dark_Knight["title"]
-  #  name = role["role_name"]
-   # actor_id = role["actor_id"]
-    #actorname = Actor.find_by({"id"=> actor_id})
-    #actorname["actor_name"]
-    #puts "#{title}  #{name}  #{actorname}"
-#end
-
-#for role in roles_the_dark_knight_rises
-    #title = The_Dark_Knight_Rises["title"]
-    #name = role["role_name"]
-    #actor_id = role["actor_id"]
-   # actorname = Actor.find_by({"id"=> actor_id})
-  #  actorname["actor_name"]
-
- #   puts "#{title}  #{name}  #{actorname}"
-#end
-
-
-#def actor_name_function
-  #  Actor.find_by({"id"=> x })
- #       Actor ["actor_name"]
-#end
-
-#for role in roles_batman_begins
- #   title = Batman_Begins["title"] 
-  #  name = role["role_name"]
-   # actor = actor_name_function ("actor_id")
-#end
-
-    #puts "#{title}  #{name}  #{actor}"
-#end
