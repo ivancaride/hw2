@@ -317,10 +317,30 @@ for role in roles_batman_begins
     title = Batman_Begins["title"]
     name = role["role_name"]
     actor_id = role["actor_id"]
-    actorname = Actor[]
+    actorname = Actor.find_by({"id"=> actor_id})
 
-    puts "#{title}  #{name}  #{actor_id}"
+    puts "#{title}  #{name}  #{actorname}"
 end
+
+for role in roles_the_dark_knight
+    title = The_Dark_Knight["title"]
+    name = role["role_name"]
+    actor_id = role["actor_id"]
+    actorname = Actor.find_by({"id"=> actor_id})
+    actorname["actor_name"]
+    puts "#{title}  #{name}  #{actorname}"
+end
+
+for role in roles_the_dark_knight_rises
+    title = The_Dark_Knight_Rises["title"]
+    name = role["role_name"]
+    actor_id = role["actor_id"]
+    actorname = Actor.find_by({"id"=> actor_id})
+    actorname["actor_name"]
+
+    puts "#{title}  #{name}  #{actorname}"
+end
+
 
 #def actor_name_function
   #  Actor.find_by({"id"=> x })
